@@ -30,7 +30,7 @@ trait PoolHelper {
 
   def borrow[T, U](pool: ReturnablePool[T])(
     f: T => U,
-    onFail: Throwable => Unit = _ => Unit): Future[Either[Unit, U]] = {
+    onFail: Throwable => Unit = _ => ()): Future[Either[Unit, U]] = {
     pool
       .reserve()
       .map(res => {
@@ -46,7 +46,7 @@ trait PoolHelper {
 
   def ration[T, U](pool: TimedLimitsPool[T])(
     f: T => U,
-    onFail: Throwable => Unit = _ => Unit): Future[Either[Unit, U]] = {
+    onFail: Throwable => Unit = _ => ()): Future[Either[Unit, U]] = {
     pool
       .reserve()
       .map(res => {
