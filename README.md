@@ -4,7 +4,7 @@ Some useful pool helper. A pure Scala library.
 # Using in your project
 An example SBT dependency string for this library would look like this:
 ```scala
-val pool-helper = "com.odinliu.util" %% "pool-helper" % "1.0.0"
+val pool-helper = "com.odinliu.util" %% "pool-helper" % "1.0.1"
 ```
 
 # Usage
